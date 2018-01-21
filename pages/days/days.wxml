@@ -1,2 +1,8 @@
 <!--pages/days/days.wxml-->
-<text>pages/days/days.wxml</text>
+<view>
+<view wx:for="{{header}}">
+  {{item}}
+</view>
+<button wx:for='{{header}}'>午</button>
+<button wx:for='{{header}}'>晚</button>
+</view>

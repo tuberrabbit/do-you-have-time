@@ -1,11 +1,11 @@
-// pages/days/days.js
+// pages/menu/menu.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    header: ['周一', '周二', '周三', '周四', '周五', '周六', '周日']
+  
   },
 
   /**
@@ -62,5 +62,11 @@ Page({
    */
   onShareAppMessage: function () {
   
+  },
+  createVotesByWeek: function(){
+    wx.navigateTo({
+      url: '../days/days',
+    })
   }
+
 })
