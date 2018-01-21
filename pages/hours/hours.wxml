@@ -1,0 +1,5 @@
+<view class="container">
+  <view class='view' bindtouchmove='touchmove'>tuber</view>
+  
+</view>
+  <view class='view'>{{x}} {{y}}</view>
