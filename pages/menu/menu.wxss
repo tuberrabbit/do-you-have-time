@@ -1,1 +1,14 @@
 /* pages/menu/menu.wxss */
+
+.page {
+  padding-top: 50px;
+  text-align: center;
+}
+
+.menu {
+  margin: 6px auto;
+  width: 200px;
+  height: 29px;
+  line-height: 29px;
+  border-radius: 15px;
+}

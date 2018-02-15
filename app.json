@@ -1,13 +1,13 @@
 {
   "pages": [
-    "pages/index/index",
-    "pages/result/result",
     "pages/days/days",
-    "pages/menu/menu"
+    "pages/menu/menu",
+    "pages/index/index",
+    "pages/result/result"
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
+    "navigationBarBackgroundColor": "#eee",
     "navigationBarTitleText": "你有空吗",
     "navigationBarTextStyle": "black"
   },

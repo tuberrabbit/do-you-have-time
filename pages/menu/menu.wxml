@@ -1,5 +1,9 @@
 <!--pages/menu/menu.wxml-->
-<view class="container">
-  <button bindtap='createVotesByWeek'>一周之内</button>
-  <button>一天之内</button>
+<view class="page">
+  <button class='menu' size='mini' type='primary' bindtap='newDays'>
+    一周之内
+  </button>
+  <button class='menu' size='mini' type='primary' bindtap='newHours'>
+    一天之内
+  </button>
 </view>

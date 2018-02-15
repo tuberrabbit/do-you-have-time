@@ -21,6 +21,11 @@ Page({
       })
     }
   },
+  createNew: function () {
+    wx.navigateTo({
+      url: '../menu/menu',
+    });
+  },
   onLoad: function () {
   },
   onShow: function () {

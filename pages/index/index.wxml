@@ -1,9 +1,13 @@
 <!--index.wxml-->
-<view class="container">
+<view class="page">
   <scroll-view>
     <template is='history' data='{{...item}}' wx:for='{{list}}' wx:key='id' />
   </scroll-view>
-  <navigator url='../menu/menu'>发起新投票</navigator>
+  <view class='nav'>
+    <button class='menu' type='primary' bindtap='createNew'>
+      发起新投票
+    </button>
+  </view>
 </view>
 
 <template name='history'>
