@@ -1,15 +1,15 @@
 {
-  "pages":[
-    "pages/days/days",
-    "pages/menu/menu",
+  "pages": [
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/result/result",
+    "pages/days/days",
+    "pages/menu/menu"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "首页",
-    "navigationBarTextStyle":"black"
+    "navigationBarTitleText": "你有空吗",
+    "navigationBarTextStyle": "black"
   },
   "debug": true
 }

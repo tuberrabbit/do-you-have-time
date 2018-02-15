@@ -1,0 +1,4 @@
+<!--pages/result/result.wxml-->
+<view>
+<button type='primary' bindtap='applyDate'>发起见面</button>
+</view>
