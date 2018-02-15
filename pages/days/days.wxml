@@ -1,4 +1,13 @@
 <!--pages/days/days.wxml-->
+<view class='page'>
+  <template is='header' data='{{table}}' />
+  <template is='morning' data='{{table}}' />
+  <template is='afternoon' data='{{table}}' />
+  <button class='button' type='primary' open-type='getUserInfo' bindgetuserinfo='submit'>提交</button>
+  <button class='button' open-type='share'>分享</button>
+  <button class='button' bindtap='checkOut'>查看结果</button>
+</view>
+
 <template name='header'>
   <view class='row'>
     <text class='cell' wx:for='{{table}}' wx:key='value'>
@@ -18,12 +27,3 @@
     <text class='cell option {{item.afternoon && "selected"}}' wx:for='{{table}}' wx:key='value' data-value='{{index}}-afternoon' bindtap='handleSelect'>晚</text>
   </view>
 </template>
-
-<view class='page'>
-  <template is='header' data='{{table}}' />
-  <template is='morning' data='{{table}}' />
-  <template is='afternoon' data='{{table}}' />
-  <button type='primary' disabled='{{disabled}}' open-type='getUserInfo' bindgetuserinfo='submit'>提交</button>
-  <button open-type='share'>分享</button>
-  <navigator url='../result/result'>查看结果</navigator>
-</view>

@@ -17,7 +17,23 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    console.log(options.id);
+    // todo: request result by id;
+    this.setData({
+      list: [{
+        value: '周一上午',
+        count: 18,
+      }, {
+        value: '周二下午',
+        count: 18,
+      }, {
+        value: '周三上午',
+        count: 18,
+      }, {
+        value: '周四上午',
+        count: 18,
+      }],
+    });
   },
 
   /**

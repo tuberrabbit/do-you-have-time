@@ -1,9 +1,9 @@
 {
   "pages": [
+    "pages/result/result",
     "pages/days/days",
     "pages/menu/menu",
-    "pages/index/index",
-    "pages/result/result"
+    "pages/index/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

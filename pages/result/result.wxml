@@ -1,4 +1,14 @@
 <!--pages/result/result.wxml-->
-<view>
-<button type='primary' bindtap='applyDate'>发起见面</button>
+<view class='page'>
+  <view>
+    <text class='key'>投票结果</text>
+    <text class='value'>次数</text>
+    <scroll-view class='list'>
+      <view wx:for='{{list}}' wx:key='{{value}}'>
+        <text class='key'>{{item.value}}</text>
+        <text class='value'>{{item.count}}</text>
+      </view>
+    </scroll-view>
+  </view>
+  <button type='primary' bindtap='applyDate'>发起见面</button>
 </view>

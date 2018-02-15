@@ -1,20 +1,29 @@
 /* pages/days/days.wxss */
-.page{
+
+.page {
   padding: 0 20px;
 }
-.row{
+
+.row {
   display: flex;
   justify-content: space-between;
   margin-bottom: 10px;
 }
-.cell{
+
+.cell {
   display: inline-block;
   padding: 5px 10px;
   text-align: center;
 }
-.option{
+
+.option {
   background-color: #ccc;
 }
-.selected{
-  background-color: #09BB07;
+
+.selected {
+  background-color: #09bb07;
+}
+
+.button {
+  margin-top: 15px;
 }

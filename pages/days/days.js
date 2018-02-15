@@ -12,18 +12,15 @@ Page({
     const { table } = this.data;
     const cell = table[values[0]];
     cell[values[1]] = !cell[values[1]];
-    this.setData({
-      table,
-      disabled: !table.some(cell => cell.morning || cell.afternoon),
-    });
+    this.setData({ table });
   },
 
   submit: function (event) {
-    const { table, disabled } = this.data;
-    if (disabled) {
-      return;
-    }
+    const { table } = this.data;
     console.log(table, event.detail.signature, event.detail.userInfo);
+  },
+
+  checkOut: function () {
     wx.navigateTo({
       url: '../result/result',
     })
@@ -63,10 +60,7 @@ Page({
       morning: false,
       afternoon: false,
     }];
-    this.setData({
-      table,
-      disabled: !table.some(cell => cell.morning || cell.afternoon),
-    });
+    this.setData({ table });
   },
 
   /**
