@@ -5,53 +5,55 @@ const app = getApp()
 
 Page({
   data: {
-    list: [{
-      id: 0,
-      title: '海底捞约饭',
-      date: formatTime(new Date())
-    }, {
-      id: 1,
-      title: '海底捞约饭',
-      date: formatTime(new Date())
-    }, {
-      id: 2,
-      title: '海底捞约饭',
-      date: formatTime(new Date())
-    }, {
-      id: 3,
-      title: '海底捞约饭',
-      date: formatTime(new Date())
-    }, {
-      id: 4,
-      title: '海底捞约饭',
-      date: formatTime(new Date())
-    }, {
-      id: 5,
-      title: '海底捞约饭',
-      date: formatTime(new Date())
-    }],
   },
   //事件处理函数
-  bindViewTap: function () {
-    wx.navigateTo({
-      url: '../logs/logs'
-    })
+  openVote: function (evt) {
+    const type = evt.currentTarget.dataset.type;
+    const id = evt.currentTarget.dataset.id;
+    const openid = wx.getStorageSync('openid');
+    if (type === 'days') {
+      wx.navigateTo({
+        url: `../days/days?id=${id}&openid=${openid}`,
+      });
+    } else if (type === 'hours') {
+      wx.showToast({
+        title: '调整去小时区',
+      })
+    }
   },
   onLoad: function () {
-    console.log('onLoad');
   },
   onShow: function () {
-    console.log('onShow');
+    // request: history list data
+    this.setData({
+      list: [{
+        id: 0,
+        type: 'days',
+        title: '海底捞约饭',
+        date: formatTime(new Date())
+      }, {
+        id: 1,
+        title: '海底捞约饭',
+        date: formatTime(new Date())
+      }, {
+        id: 2,
+        title: '海底捞约饭',
+        date: formatTime(new Date())
+      }, {
+        id: 3,
+        title: '海底捞约饭',
+        date: formatTime(new Date())
+      }, {
+        id: 4,
+        title: '海底捞约饭',
+        date: formatTime(new Date())
+      }, {
+        id: 5,
+        title: '海底捞约饭',
+        date: formatTime(new Date())
+      }],
+    });
   },
   onReady: function () {
-    console.log('onReady');
   },
-  getUserInfo: function (e) {
-    console.log(e)
-    app.globalData.userInfo = e.detail.userInfo
-    this.setData({
-      userInfo: e.detail.userInfo,
-      hasUserInfo: true
-    })
-  }
 })

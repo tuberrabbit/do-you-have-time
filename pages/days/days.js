@@ -5,36 +5,6 @@ Page({
    * 页面的初始数据
    */
   data: {
-    table: [{
-      value: '一',
-      morning: false,
-      afternoon: false,
-    }, {
-      value: '二',
-      morning: false,
-      afternoon: false,
-    }, {
-      value: '三',
-      morning: false,
-      afternoon: false,
-    }, {
-      value: '四',
-      morning: false,
-      afternoon: false,
-    }, {
-      value: '五',
-      morning: false,
-      afternoon: false,
-    }, {
-      value: '六',
-      morning: false,
-      afternoon: false,
-    }, {
-      value: '日',
-      morning: false,
-      afternoon: false,
-    }],
-    disabled: true,
   },
 
   handleSelect: function (event) {
@@ -62,21 +32,53 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    console.log(options.id, options.openid);
+    // request history vote by id & openid
+    const table = [{
+      value: '一',
+      morning: true,
+      afternoon: false,
+    }, {
+      value: '二',
+      morning: false,
+      afternoon: false,
+    }, {
+      value: '三',
+      morning: true,
+      afternoon: false,
+    }, {
+      value: '四',
+      morning: false,
+      afternoon: false,
+    }, {
+      value: '五',
+      morning: false,
+      afternoon: false,
+    }, {
+      value: '六',
+      morning: false,
+      afternoon: false,
+    }, {
+      value: '日',
+      morning: false,
+      afternoon: false,
+    }];
+    this.setData({
+      table,
+      disabled: !table.some(cell => cell.morning || cell.afternoon),
+    });
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
   },
 
   /**

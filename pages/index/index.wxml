@@ -7,8 +7,8 @@
 </view>
 
 <template name='history'>
-  <view>
-    <text>{{title}}</text>
-    <text>{{date}}</text>
+  <view class='history' bindtap='openVote' data-id='{{id}}' data-type='{{type}}'>
+    <text class='title'>{{title}}</text>
+    <text class='date'>{{date}}</text>
   </view>
 </template>
